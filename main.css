@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+
+
+/* || REST */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --OFF-WHITE: hsla(0, 0%, 100%, 0.75);
+  --TITLE-AND-BG: #F2F2F2;
+  --WHITE: #FFFFFF;
+  --DEEP-GREEN: #004140;
+  --GREEN: #006971;
+  --ORANGE: #E28625;
+
+  /* TYPOGRAPHY */
+  --FF1: "Big Shoulders Display", serif;
+  --FF2: "Lexend Deca", serif;
+
+  /* TEXT PRESET */
+  --TITLE: 700 2.5rem var(--FF1);
+  --SUBTEXT: 400 .9375rem/1.5625rem var(--FF2);
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+.responsive-image {
+  display: none;
+}
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  display: grid;
+  place-content: center;
+  background-color: var(--TITLE-AND-BG);
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+a:any-link {
+  text-decoration: none;
+}
+
+/* CARD */
+.cars-product-card {
+    max-width: 327px;
+    min-height: 1326px;
+    border-radius: .5rem;
+    overflow: hidden;
+    margin: 5.5rem 1.5rem;
+    display: flex;
+    flex-flow: column;
+}
+
+/* CAR PRODUCTS */
+.cars-product {
+  width: 327px;
+  height: 442px;
+  padding: 3rem 3.0313rem 3rem 2.9688rem;
+  display: flex;
+  flex-flow: column;
+  gap: 2.125rem;
+}
+
+/* CAR PRODUCT ICON */
+.cars-product__icons {
+  width: 64px;
+  height: 40px;
+}
+
+.cars-product__icons img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover
+}
+
+/* CAR PRODUCT CONTENT */
+.car-product__content {
+  width: 231px;
+  height: 271px;
+  display: flex;
+  flex-flow: column;
+  gap: 1.5rem;
+}
+
+.cars-product__titles {
+  font: var(--TITLE);
+  color: var(--TITLE-AND-BG);
+}
+
+.cars-product__subtext {
+  font: var(--SUBTEXT);
+  color: var(--OFF-WHITE);
+}
+
+/* CAR PRODUCT BUTTON */
+.cars-product__links {
+  width: 146px;
+  height: 48px;
+  border-radius: 1.5625rem;
+  font: var(--SUBTEXT);
+  background-color: var(--TITLE-AND-BG);
+  display: grid;
+  place-content: center;
+}
+
+/* SEDANS */
+.sedans {
+  background-color: var(--ORANGE);
+}
+
+.sedans-link {
+  color: var(--ORANGE);
+}
+
+/* SUVS */
+.suvs {
+  background-color: var(--GREEN);
+}
+
+.suvs-link {
+  color: var(--GREEN);
+}
+
+/* LUXURY */
+.luxury {
+  background-color: var(--DEEP-GREEN);
+}
+
+.luxury-link {
+  color: var(--DEEP-GREEN);
+}
+
+/* TABLET */
+@media screen and (min-width: 768px ) {
+  /* CARD */
+  .cars-product-card {
+    max-width: 920px;
+    min-height: 500px;
+    margin: 10.6875rem auto 8.0625rem auto;
+    flex-flow: row;
+  }
+
+  /* CAR PRODUCTS */
+  .cars-product {
+    width: 307px;
+    height: 500px;
+    padding: 3rem 2.9688rem;
+    gap: 2.1875rem;
+  }
+
+  /* CAR PRODUCT ICON */
+  .cars-product__icons {
+    width: 63.91px;
+  }
+
+  /* CAR PRODUCT CONTENT */
+  .car-product__content {
+    width: 212px;
+    height: 329px;
+    gap: 0rem;
+  }
+
+  .cars-product__titles {
+    margin-bottom: 1.5625rem;
+  }
+  
+  .cars-product__subtext {
+    margin-bottom: 5.1875rem;
+  }
+
+}
+
+/* DESKTOP */
+@media screen and (min-width: 992px) {
+  /* ACTIVE BUTTONS */
+  .sedans-link:hover, 
+  .sedans-link:focus-visible {
+    background-color:var(--ORANGE);
+    color: var(--WHITE);
+    border: .125rem solid var(--WHITE);
+  }
+
+  .suvs-link:hover, 
+  .suvs-link:focus-visible {
+    background-color:var(--GREEN);
+    color: var(--WHITE);
+    border: .125rem solid var(--WHITE);
+  }
+
+  .luxury-link:hover, 
+  .luxury-link:focus-visible {
+    background-color:var(--DEEP-GREEN);
+    color: var(--WHITE);
+    border: .125rem solid var(--WHITE);
+  }
+}
