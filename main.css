@@ -122,6 +122,7 @@ a:any-link {
 .cars-product__titles {
   font: var(--TITLE);
   color: var(--TITLE-AND-BG);
+  text-transform: uppercase;
 }
 
 .cars-product__subtext {
@@ -202,7 +203,7 @@ a:any-link {
   }
   
   .cars-product__subtext {
-    margin-bottom: 5.1875rem;
+    margin: 0rem auto 5.1875rem .0313rem;
   }
 
 }
